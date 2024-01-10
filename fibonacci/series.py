@@ -17,7 +17,7 @@ def fibonacci(n):
     ValueError: If n is not a positive integer.
     """
     if n <= 0:
-        return "no can do! n must be a positive integer"
+        raise ValueError("no can do! n must be a positive integer")
     elif n == 1:
         return 0
     elif n == 2:
@@ -90,6 +90,5 @@ def sum_series(n, first=0, second=1):
         return sum_series(n - 1, first, second) + sum_series(n - 2, first, second)
     
 
-print(sum_series(1))
-print(sum_series(5, 2, 1))
+
 
