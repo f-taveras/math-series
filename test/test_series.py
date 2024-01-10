@@ -27,7 +27,7 @@ def test_sum_series():
     assert sum_series(10, 2, 1) == 76
 
     assert sum_series(5, 4, 2) == 14
-    assert sum_series(10, 4, 2) == 230
+    assert sum_series(10, 4, 2) == 152
 
     with pytest.raises(ValueError):
         sum_series(-1)
