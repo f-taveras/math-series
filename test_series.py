@@ -1,9 +1,24 @@
 import pytest
 
-from series import fib_recursive
+from series import fibonacci
 
-@pytest.mark.parametrize("n, expected", [(0, 0), (1, 1), (2, 1), (10, 55)])
+def test_base():
+    assert fibonacci(1) == 0
 
-def test_fib_recursive(n, expected):
-    result = fib_recursive(n)
-    assert result == expected
+def test_second():
+    assert fibonacci(2) == 1 
+
+def test_third():
+    assert fibonacci(3) == 1
+
+def test_fifth():
+    assert fibonacci(5) == 3
+
+
+def test_invalid_input():
+    assert fibonacci(0) == "no can do! n must be a positive integer"
+    assert fibonacci(-1) == "no can do! n must be a positive integer"
+
+
+
+    
